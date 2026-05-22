@@ -22,5 +22,5 @@ python main.py
 ## Próximas fases
 
 - [x] Fase 2 — Exploração aleatória e obstáculos
-- [ ] Fase 3 — Sistema de comida e estados
+- [x] Fase 3 — Sistema de comida e estados
 - [ ] Fase 4 — Trilhas de feromônio

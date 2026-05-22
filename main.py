@@ -1,6 +1,7 @@
-import pygame, sys 
+import pygame, sys, random
 from core.settings import *
 from entities.ant import Ant
+from entities.food import Food
 
 def main():
 
@@ -10,6 +11,8 @@ def main():
     pygame.display.set_caption(TITLE)
     clock = pygame.time.Clock()
     ants = [Ant(SCREEN_WIDTH//2, SCREEN_HEIGHT//2) for _ in range(ANT_COUNT)]
+    foods = [Food(random.randint(0, SCREEN_WIDTH), random.randint(0, SCREEN_HEIGHT)) for _ in range(20)]
+    
 
     running = True
     while running:
@@ -24,11 +27,13 @@ def main():
                 if event.key == pygame.K_ESCAPE:
                     running = False
 
-        screen.fill(COLOR_BLACKGROUND)
+        screen.fill(COLOR_BACKGROUND)
         pygame.draw.circle(screen, COLOR_COLONY, (SCREEN_WIDTH//2, SCREEN_HEIGHT//2), COLONY_RADIUS)
         for ant in ants:
-            ant.update(dt)
+            ant.update(dt, foods)
             ant.draw(screen)
+        for food in foods:
+            food.draw(screen)
         pygame.display.flip()
 
     pygame.quit()
