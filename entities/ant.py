@@ -10,6 +10,7 @@ class Ant:
         self.x = x
         self.y = y
 
+        self.wander_strength = 0.3  # radianos por frame
         # Direção aleatoria inicial em radianos
         self.angle = random.uniform(0, 2* math.pi)
 
@@ -18,7 +19,7 @@ class Ant:
 
     def update(self, dt):
         # Movimento baseado no ângulo atual
-
+        self.angle += random.uniform(-self.wander_strength, self.wander_strength)
         self.x += math.cos(self.angle) * self.speed * dt
         self.y += math.sin(self.angle) * self.speed * dt
 

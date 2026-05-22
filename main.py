@@ -25,6 +25,7 @@ def main():
                     running = False
 
         screen.fill(COLOR_BLACKGROUND)
+        pygame.draw.circle(screen, COLOR_COLONY, (SCREEN_WIDTH//2, SCREEN_HEIGHT//2), COLONY_RADIUS)
         for ant in ants:
             ant.update(dt)
             ant.draw(screen)
