@@ -23,4 +23,4 @@ python main.py
 
 - [x] Fase 2 — Exploração aleatória e obstáculos
 - [x] Fase 3 — Sistema de comida e estados
-- [ ] Fase 4 — Trilhas de feromônio
+- [x] Fase 4 — Trilhas de feromônio
