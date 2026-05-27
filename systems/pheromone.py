@@ -1,13 +1,6 @@
-import pygame, numpy as np
+import pygame
+import numpy as np
 from core.settings import *
-
-CELL_SIZE = 10
-GRID_W = SCREEN_WIDTH // CELL_SIZE #120
-GRID_H = SCREEN_HEIGHT // CELL_SIZE #80
-
-EVAPORATION_RATE = 0.98 # por frame
-DEPOSIT_AMOUNT = 1.0
-MAX_INTENSITY = 10.0
 
 
 class PheromoneSystem:

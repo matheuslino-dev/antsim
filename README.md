@@ -24,3 +24,4 @@ python main.py
 - [x] Fase 2 — Exploração aleatória e obstáculos
 - [x] Fase 3 — Sistema de comida e estados
 - [x] Fase 4 — Trilhas de feromônio
+- [] Fase 5 — Contagem de comida coletada; População de formigas crescendo com recursos; Rainha como entidade central;
